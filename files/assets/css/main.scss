@@ -1,0 +1,74 @@
+@import "variables";
+
+.banner-image {
+  position: relative;
+  .header-image {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100vw;
+    img {
+      width: 100%;
+      height: 85vh;
+      object-fit: cover;
+      object-position: 0 0;
+    }
+  }
+}
+
+.preface {
+  background: linear-gradient(to right, #aacdea 0%, #0068b4 100%);
+  margin-top: -7px;
+  .preface-teaser {
+    width: 90%;
+    max-width: $max-width;
+    margin: 0 auto;
+    h2 {
+      border-top: 6px solid #d3e5f4;
+      padding-top: 30px;
+      margin-top: 0;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+    p {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+  .image-text {
+    display: flex;
+    justify-content: space-between;
+    max-width: 700px;
+    margin: 20px auto;
+    .image-left {
+      width: 30%;
+      img {
+        width: 220px;
+      }
+    }
+    .image-right {
+      width: 60%;
+      img {
+        width: 150px;
+      }
+      p {
+        font-size: 17px;
+        line-height: 1.2em;
+        border-top: 1px solid white;
+        padding-top: 13px;
+        margin-top: -20px;
+      }
+    }
+  }
+}
+
+.inscription {
+  position: relative;
+  img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+  }
+}
+

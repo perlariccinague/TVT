@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8abae678-e42d-4aa1-81b3-51de978f9f0d" name="server" url="http://www521.your-server.de">
+        <fileTransfer rootFolder="/contao413" accessType="FTPS" host="www521.your-server.de" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
