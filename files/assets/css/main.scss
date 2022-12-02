@@ -28,10 +28,6 @@
       padding-top: 30px;
       margin-top: 0;
     }
-    p {
-     /* max-width: 700px;
-      margin: 0 auto;*/
-    }
   }
   .image-text {
     display: flex;
@@ -65,7 +61,7 @@
  .main-image {
    img {
      width: 100%;
-     height: 75vh;
+     height: 85vh;
      object-fit: cover;
    }
  }
@@ -75,7 +71,7 @@
     padding: 85px;
     z-index: 16;
     top: 0;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     left: 50%;
     border-top: 6px solid #d3e5f4;
     margin-top: 0;
@@ -100,7 +96,7 @@
       }
       p {
         text-transform: uppercase;
-        font-size: 20px;
+        font-size: 25px;
         line-height: 1.3em;
         letter-spacing: 1px;
         cursor: pointer;
@@ -109,9 +105,10 @@
   }
 }
 
-
 .programm {
-  margin-top: -10px;
+  position: relative;
+  z-index: 30;
+  margin: -25px auto;
   .teaser {
     background: none;
     .formular-image {
@@ -121,6 +118,22 @@
     }
     p, h2 {
       color: $dunkleres-green;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .preface  {
+    .preface-teaser p {
+      font-size: 16px;
+    }
+    .image-text {
+      .image-left {
+        width: 40%;
+      }
+      .image-right p {
+        font-size: 13px;
+      }
     }
   }
 }

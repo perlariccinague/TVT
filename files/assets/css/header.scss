@@ -98,9 +98,41 @@
     p {
       color: white;
       font-size: 18px;
-      /*margin-left: 145px;*/
       margin-left: 74px;
       line-height: 1.2em;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .header-nav {
+    display: none;
+  }
+  .header {
+    top: 15px;
+  }
+  .header-bottom {
+    .logo-bg {
+      margin-left: -34px;
+      img {
+        width: 275px;
+      }
+    }
+    .logo-header {
+      left: 12px;
+      padding: 0;
+      img {
+        width: 200px;
+      }
+      p {
+        font-size: 8px;
+        margin-left: 48px;
+      }
+    }
+    .mobile_menu_trigger {
+      img {
+        width: 50px;
+      }
     }
   }
 }

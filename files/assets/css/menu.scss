@@ -1,0 +1,54 @@
+@import "variables";
+
+.mobile_menu .inner {
+  background: rgb(0,114, 188);
+  overflow-x: hidden;
+  .menu-close {
+    img {
+      width: 70px;
+    }
+  }
+}
+
+.inner .navigation {
+  position: relative;
+  z-index: 100;
+  margin-top: 20%;
+  .mod_navigation {
+    width: 90%;
+    max-width: $max-width;
+    margin: 200px auto;
+    ul {
+      li {
+        padding: 15px 0;
+        a,strong {
+          color: white;
+          font-size: 30px;
+          text-decoration: none;
+          letter-spacing: 1px;
+          &:hover {
+            color: $helle-blue;
+          }
+        }
+        &:not(:last-child) {
+          border-bottom: 1px solid white;
+          text-align: center;
+        }
+        &:last-child {
+          text-align: center;
+        }
+        &.active strong {
+          color: $helle-blue;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .mobile_menu .inner {
+    .menu-close {
+      width: 50px;
+    }
+  }
+}

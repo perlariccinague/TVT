@@ -3,6 +3,8 @@ body {
   color: white;
   line-height: 1.6em;
   font-size: 20px;
+  font-family: 'Inter Tight', serif;
+  overflow-x: hidden;
 }
 
 ul{
@@ -20,4 +22,15 @@ h2 {
 p {
   max-width: 700px;
   margin: 0 auto;
+  font-weight: lighter;
+}
+
+#wrapper {
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 760px) {
+  h2 {
+    font-size: 18px;
+  }
 }
