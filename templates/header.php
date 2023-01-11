@@ -1,7 +1,7 @@
 
 <div class="header-image">
     <div class="header-bar"></div>
-    <img src="files/inhalte/bilder/titelbilder/4b.png">
+    {{insert_module::7}}
     <div class="header">
         <div class="header-nav">
             {{insert_module::1}}

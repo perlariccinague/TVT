@@ -1,9 +1,26 @@
 @import "variables";
 
-.header-image {
-  position: relative;
-  img {
-    width: 100%;
+
+#header {
+  height: 50vh;
+  min-height: 550px;
+  .inside {
+    height: 100%;
+    .header-image {
+      position: relative;
+      height: 100%;
+      .mod_pageimage {
+        height: 100%;
+        figure {
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -11,8 +28,6 @@
   width: 90%;
   max-width: 1000px;
   z-index: 8;
- /* position: relative;
-  margin: 0 auto;*/
   position: absolute;
   top: 0;
   left: 50%;
@@ -100,6 +115,22 @@
       font-size: 18px;
       margin-left: 74px;
       line-height: 1.2em;
+    }
+  }
+}
+
+.mod_mobile_menu {
+  overflow: visible;
+}
+
+.mobile_menu_trigger {
+  cursor: pointer;
+  img {
+    transition: transform 250ms;
+  }
+  &:hover {
+    img {
+      transform: scale(1.3);
     }
   }
 }

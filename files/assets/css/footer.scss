@@ -13,16 +13,18 @@
   margin: 0 auto;
   .footer-top {
     text-align: center;
+    transform: translateY(-135px);
     .logo-bg {
       position: relative;
       margin-top: -14px;
       img {
-        width: 500px;
+        position: relative;
+        width: 745px;
       }
     }
     .logo-header {
       position: absolute;
-      top: 10%;
+      top: 20%;
       left: 50%;
       transform: translateX(-50%);
       img {
@@ -67,14 +69,17 @@
 }
 
 @media screen and (max-width: 760px) {
-  .footer .footer-top .logo-header {
-    top: 20px;
-    img {
-      margin-left: -1px;
-    }
-    p {
-      font-size: 11px;
-      margin-left: 48px;
+  .footer .footer-top {
+    transform: translateY(-75px);
+    .logo-header {
+      top: 32px;
+      img {
+        margin-left: -1px;
+      }
+      p {
+        font-size: 11px;
+        margin-left: 48px;
+      }
     }
   }
   .footer .footer-bottom {

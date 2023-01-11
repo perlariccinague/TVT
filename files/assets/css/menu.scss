@@ -6,26 +6,34 @@
   .menu-close {
     img {
       width: 70px;
+      transition: transform 250ms;
+      &:hover {
+        transform: scale(1.3);
+      }
     }
+  }
+  .header {
+    position: relative;
   }
 }
 
 .inner .navigation {
   position: relative;
   z-index: 100;
-  margin-top: 20%;
   .mod_navigation {
     width: 90%;
     max-width: $max-width;
-    margin: 200px auto;
+    margin: 0 auto;
     ul {
       li {
+        text-transform: uppercase;
         padding: 15px 0;
         a,strong {
           color: white;
           font-size: 30px;
           text-decoration: none;
           letter-spacing: 1px;
+          transition: color 250ms;
           &:hover {
             color: $helle-blue;
           }

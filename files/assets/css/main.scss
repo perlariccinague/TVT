@@ -9,9 +9,10 @@
     width: 100vw;
     img {
       width: 100%;
-      height: 85vh;
+      height: auto;
       object-fit: cover;
       object-position: 0 0;
+      max-height: 890px;
     }
   }
 }
@@ -56,22 +57,30 @@
   }
 }
 
+.inscription {
+  background-image: url("../../inhalte/bilder/tmue20201214b037.png");
+}
+
+.programm {
+  background-image: url("../../inhalte/bilder/programm-bg.jpg");
+}
+
 .inscription, .programm {
   position: relative;
- .main-image {
-   img {
-     width: 100%;
-     height: 85vh;
-     object-fit: cover;
-   }
- }
+  background-position: center center;
+  .main-image {
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 890px;
+      object-fit: cover;
+    }
+  }
   .teaser {
     background: #0000006e;
-    position: absolute;
     padding: 85px;
     z-index: 16;
     top: 0;
-    transform: translateX(-50%);
     left: 50%;
     border-top: 6px solid #d3e5f4;
     margin-top: 0;
@@ -83,7 +92,6 @@
         content: "";
         height: 16px;
         width: 33%;
-        position: absolute;
         border-bottom: 1px solid #9ec6e6;
         margin-top: 40px;
       }
@@ -100,8 +108,24 @@
         line-height: 1.3em;
         letter-spacing: 1px;
         cursor: pointer;
+        a {
+          text-decoration: none;
+          outline: none;
+        }
       }
     }
+  }
+}
+
+.inscription {
+  .teaser .formular-image p {
+    text-shadow: 1px 1px 20px black;
+    a {
+      color: white;
+    }
+  }
+  .multiple-icons .ce_text p a:after {
+    background-color: white;
   }
 }
 
@@ -118,8 +142,109 @@
     }
     p, h2 {
       color: $dunkleres-green;
+      a {
+        color: $darkest-blue;
+      }
     }
   }
+  .multiple-icons .ce_text p a:after {
+    background-color: #003c62;
+  }
+}
+
+.multiple-icons {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: space-between;
+  .ce_text {
+    overflow: visible;
+    p {
+      a {
+        position: relative;
+        &:after {
+          position: absolute;
+          content: '';
+          top: 27px;
+          left: 0;
+          width: 100%;
+          height: 0;
+          transition: height 250ms;
+        }
+      }
+    }
+    &:hover p a:after {
+      height: 3px;
+    }
+  }
+}
+
+body.subpage {
+  h1,h2,h3,h4,h5 {
+    text-align: center;
+  }
+  #main .inside .mod_article {
+    color: black;
+    &:first-child {
+      margin-top: 80px;
+    }
+    &:last-child {
+      margin-bottom: 200px;
+    }
+    p {
+      margin: 20px auto;
+    }
+  }
+}
+
+#main .mod_article .ce_text:not(.formular-image) p a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  &:after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background-color: white;
+    transition: height 250ms;
+  }
+  &:hover:after {
+    height: 4px;
+  }
+}
+
+body.subpage #main .mod_article .ce_text:not(.formular-image) p a {
+  color: black;
+  &:after {
+    color: black;
+    background-color: black;
+  }
+}
+
+#main .programm .teaser .ce_text:not(.formular-image) p a {
+  color: #024545;
+  &:after {
+    background-color: #024545;
+  }
+}
+
+.banner {
+  background: #00508d;
+  text-align: center;
+  padding: 50px 0;
+}
+.banner h3 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.banner p {
+  font-size: 45px;
+  font-weight: bold;
+  margin: 20px auto;
 }
 
 @media screen and (max-width: 760px) {
@@ -134,6 +259,12 @@
       .image-right p {
         font-size: 13px;
       }
+    }
+  }
+
+  .inscription,.programm {
+    .teaser {
+      padding: 20px;
     }
   }
 }
